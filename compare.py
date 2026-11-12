@@ -1,10 +1,10 @@
 import re
 from difflib import SequenceMatcher
 
-
-def tokenize(text: str, ignore_extra_spaces: bool = True):
+def tokenize(text, ignore_extra_spaces=True):
     if ignore_extra_spaces:
-        return text.split()
+        text = re.sub(r" {2,}", " ", text)
+
     return re.findall(r"\s+|\S+", text)
 
 

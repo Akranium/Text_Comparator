@@ -36,10 +36,46 @@
 
         </div>
 
+        <label class="checkbox-label">
+            <input
+                type="checkbox"
+                id="ignore-extra-spaces"
+                checked
+            >
+            Ignore extra spaces
+        </label>
+
         <button id="compare-button">Compare</button>
+
+        <section id="results" class="results" hidden>
+
+            <h2>Comparison Results</h2>
+
+            <div class="stats">
+                <p>Added: <span id="added-count">0</span></p>
+                <p>Removed: <span id="removed-count">0</span></p>
+                <p>Similarity: <span id="similarity">0%</span></p>
+            </div>
+
+            <div class="text-inputs">
+
+                <div class="input-group">
+                    <h3>Original Text</h3>
+                    <div id="original-result" class="result-panel"></div>
+                </div>
+
+                <div class="input-group">
+                    <h3>Modified Text</h3>
+                    <div id="modified-result" class="result-panel"></div>
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 
+    <script src="/static/script.js"></script>
 </body>
 
 </html>
