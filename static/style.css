@@ -84,6 +84,11 @@ button:hover {
     background-color: #1d4ed8;
 }
 
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 /* =====================================================
    4. OPTION CHECKBOXES
 ===================================================== */

@@ -11,9 +11,17 @@ const addedCount = document.getElementById("added-count");
 const removedCount = document.getElementById("removed-count");
 const similarity = document.getElementById("similarity");
 
+originalInput.addEventListener("input", validateInputs);
+modifiedInput.addEventListener("input", validateInputs);
+validateInputs();
+
 compareButton.addEventListener("click", async () => {
     const originalText = originalInput.value;
     const modifiedText = modifiedInput.value;
+
+    if (!originalInput.value.trim() || !modifiedInput.value.trim()) {
+        return;
+    }
 
     try {
         const response = await fetch("/api/compare", {
@@ -84,4 +92,11 @@ function renderComparison(changes) {
     }
 
     resultsSection.hidden = false;
+}
+
+function validateInputs() {
+    const hasOriginal = originalInput.value.trim().length > 0;
+    const hasModified = modifiedInput.value.trim().length > 0;
+
+    compareButton.disabled = !hasOriginal || !hasModified;
 }
