@@ -93,4 +93,4 @@ http://127.0.0.1:8000/docs
 
 ## License
 
-This project is open source. A license can be added when one is selected.
+This project is open source, but licensed under GNU General Public License v3.0. See LICENSE.md for more details.
