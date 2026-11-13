@@ -4,7 +4,7 @@ A simple web application that compares two pieces of text and highlights their d
 
 Text_Comparator uses word-level comparison to identify and highlight additions and removals.
 
-**Use the application:** [Text_Comparator](https://DEPLOYED_URL)
+**Use the application:** [Text_Comparator](https://text-comparator-sage.vercel.app/)
 
 ## Features
 
@@ -22,7 +22,7 @@ Text_Comparator uses word-level comparison to identify and highlight additions a
 
 ## How to Use
 
-1. Open [Text_Comparator](https://DEPLOYED_URL).
+1. Open [Text_Comparator](https://text-comparator-sage.vercel.app/).
 2. Paste your original text into the first text box.
 3. Paste the modified text into the second text box.
 4. Choose whether to enable **Ignore extra spaces**.
