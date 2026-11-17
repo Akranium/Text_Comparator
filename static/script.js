@@ -3,6 +3,8 @@ console.log("TextComparator JavaScript loaded!");
 const originalInput = document.getElementById("original");
 const modifiedInput = document.getElementById("modified");
 const compareButton = document.getElementById("compare-button");
+const swapButton = document.getElementById("swap-button");
+const clearButton = document.getElementById("clear-button");
 const ignoreExtraSpacesCheckbox = document.getElementById("ignore-extra-spaces");
 const resultsSection = document.getElementById("results");
 const originalResult = document.getElementById("original-result");
@@ -54,6 +56,8 @@ compareButton.addEventListener("click", async () => {
         console.error("Error:", error);
     }
 });
+swapButton.addEventListener("click", swapInputs)
+clearButton.addEventListener("click", clearInputs)
 
 function appendHighlighted(container, text, className) {
     const span = document.createElement("span");
@@ -99,4 +103,19 @@ function validateInputs() {
     const hasModified = modifiedInput.value.trim().length > 0;
 
     compareButton.disabled = !hasOriginal || !hasModified;
+}
+
+function swapInputs() {
+  console.log("Swapping Inputs")
+  const originalValue = originalInput.value
+  const modifiedValue = modifiedInput.value
+
+  originalInput.value = modifiedValue
+  modifiedInput.value = originalValue
+}
+
+function clearInputs() {
+  console.log("Clearing Inputs")
+  originalInput.value = ""
+  modifiedInput.value = ""
 }
