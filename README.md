@@ -6,13 +6,6 @@ Text_Comparator uses word-level comparison to identify and highlight additions a
 
 **Use the application:** [Text_Comparator](https://text-comparator-sage.vercel.app/)
 
-## Features
-
-- **Word-level comparison:** Identify added and removed words.
-- **Side-by-side results:** View the original and modified texts next to each other. Added text is highlighted in green, while removed text is highlighted in red.
-- **Ignore extra spaces:** Optionally treat multiple spaces as a single space. Tabs and newlines are preserved.
-- **Comparison statistics:** View the number of added words, removed words, and the similarity percentage.
-
 ## Technologies
 
 - **Backend:** Python, FastAPI
@@ -93,4 +86,4 @@ http://127.0.0.1:8000/docs
 
 ## License
 
-This project is open source. A license can be added when one is selected.
+This project is open source, but licensed under GNU General Public License v3.0. See LICENSE.md for more details.
